@@ -1,6 +1,6 @@
 {
-  "name": "skyportd",
-  "version": "0.3.0",
+  "name": "WorldCraftd",
+  "version": "2.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
