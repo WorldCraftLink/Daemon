@@ -72,7 +72,7 @@ seed();
 
 app.use(bodyParser.json());
 app.use(basicAuth({
-    users: { 'Skyport': config.key },
+    users: { 'worldcraftd': config.key },
     challenge: true
 }));
 
@@ -209,7 +209,7 @@ function initializeWebSocketServer(server) {
         function authenticateWebSocket(ws, req, password, callback) {
             if (password === config.key) {
                 log.info('successful authentication on ws');
-                ws.send(`\r\n\u001b[33m[skyportd] \x1b[0mconnected!\r\n`);
+                ws.send(`\r\n\u001b[33m[worldcraftd] \x1b[0mconnected!\r\n`);
                 const urlParts = req.url.split('/');
                 const containerId = urlParts[2];
                 const volumeId = urlParts[3] || 0;
@@ -353,17 +353,17 @@ function initializeWebSocketServer(server) {
             };
         
             if (!actionMap[action]) {
-                ws.send(`\r\n\u001b[33m[skyportd] \x1b[0Invalid action: ${action}\r\n`);
+                ws.send(`\r\n\u001b[33m[worldcraftd] \x1b[0Invalid action: ${action}\r\n`);
                 return;
             }
         
-            ws.send(`\r\n\u001b[33m[skyportd] \x1b[0mWorking on ${action}...\r\n`);
+            ws.send(`\r\n\u001b[33m[worldcraftd] \x1b[0mWorking on ${action}...\r\n`);
         
             try {
                 await actionMap[action]();
             } catch (err) {
                 console.error(`Error performing ${action} action:`, err);
-                ws.send(`\r\n\u001b[33m[skyportd] \x1b[0Action failed: ${err.message}\r\n`);
+                ws.send(`\r\n\u001b[33m[worldcraftd] \x1b[0Action failed: ${err.message}\r\n`);
             }
         }
 
@@ -424,7 +424,7 @@ app.get('/', async (req, res) => {
         // Prepare the response object with Docker status
         const response = {
             versionFamily: 1,
-            versionRelease: 'skyportd ' + config.version,
+            versionRelease: 'worldcraftd ' + config.version,
             online: true,
             remote: config.remote,
             mysql: {
