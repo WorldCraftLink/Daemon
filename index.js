@@ -1,18 +1,27 @@
 /*
- *           __                          __      __
- *     _____/ /____  ______  ____  _____/ /_____/ /
- *    / ___/ //_/ / / / __ \/ __ \/ ___/ __/ __  / 
- *   (__  ) ,< / /_/ / /_/ / /_/ / /  / /_/ /_/ /  
- *  /____/_/|_|\__, / .___/\____/_/   \__/\__,_/   
- *            /____/_/                        
+
+██╗    ██╗██████╗██████╗██╗    ██████╗ ████████████╗ █████╗███████████████╗
+██║    ████╔═══████╔══████║    ██╔══████╔════██╔══████╔══████╔════╚══██╔══╝
+██║ █╗ ████║   ████████╔██║    ██║  ████║    ██████╔████████████╗    ██║   
+██║███╗████║   ████╔══████║    ██║  ████║    ██╔══████╔══████╔══╝    ██║   
+╚███╔███╔╚██████╔██║  ███████████████╔╚████████║  ████║  ████║       ██║   
+ ╚══╝╚══╝ ╚═════╝╚═╝  ╚═╚══════╚═════╝ ╚═════╚═╝  ╚═╚═╝  ╚═╚═╝       ╚═╝   
+                            ██╗    █████╗   ████╗  ██╗                     
+                            ██║    ██████╗  ████║ ██╔╝                     
+                            ██║    ████╔██╗ ███████╔╝                      
+                            ██║    ████║╚██╗████╔═██╗                      
+                            ███████████║ ╚██████║  ██╗                     
+                            ╚══════╚═╚═╝  ╚═══╚═╝  ╚═╝                     
+                                                                           
+
  * 
- *  Skyport Daemon v0.3.0 (Desiro City)
+ *  WorldCraft Daemon v0.3.0 (Desiro City)
  *  (c) 2024 Matt James and contributers
  * 
 */
 
 /**
- * @fileoverview Main entry file for the Skyport Daemon. This module sets up an
+ * @fileoverview Main entry file for the WorldCraft Daemon. This module sets up an
  * Express server integrated with Docker for container management and WebSocket for real-time communication.
  * It includes routes for instance management, deployment, and power control, as well as WebSocket endpoints
  * for real-time container stats and logs. Authentication is enforced using basic authentication.
