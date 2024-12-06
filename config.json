@@ -1,5 +1,5 @@
 {
-  "_note1": "WARNING: You do not need to touch the following values. Skyport Daemon will automatically set them.",
+  "_note1": "WARNING: You do not need to touch the following values. WorldCraft Daemon will automatically set them.",
   "remote": "http://localhost:3001",
   "key": "5810c3f30b7df3cd52634c1a3f9e7bfd98e185cf5d1e046bf93262f908b4e1fd",
   "_note3": "Other configuration options below. Hostname must be set for FTP to return the correct info.",
