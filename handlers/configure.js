@@ -48,7 +48,7 @@ function makeHttpRequest(url, method, data) {
   
       req.on('error', reject);
       if (data) req.write(JSON.stringify(data));
-      req.end();
+      req.end(); 
     });
   }
   
